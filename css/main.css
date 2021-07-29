@@ -1,0 +1,42 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+html{
+    background-color: rgb(37, 37, 37);
+    background-image: url("../img/background/dark-bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+body {
+    background-color: transparent;
+}
+.splitter{
+    background-color: transparent;
+    height: 250px;
+    margin-bottom: 5rem;
+}
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/**
+ * Custom cross-browser styles for keyboard :focus overrides defaults.
+ */
+ *:focus { 
+    outline: 0 !important;
+    box-shadow:
+      0 0 0 .2rem #fff,
+      0 0 0 .35rem #069 !important;
+  }
+  
+  /**
+   * Remove focus styles for non-keyboard :focus.
+   */
+  *:focus:not(.focus-visible) {
+    outline: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .img-hover:hover{
+      opacity: 0.8;
+  }
