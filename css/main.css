@@ -1,42 +1,147 @@
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
-html{
+html {
     background-color: rgb(37, 37, 37);
     background-image: url("../img/background/dark-bg.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-  }
+}
+
 body {
     background-color: transparent;
+    margin-top: 4.5rem;
 }
-.splitter{
+
+/**
+* Custom cross-browser styles for keyboard :focus overrides defaults.
+*/
+*:focus {
+    outline: 0 !important;
+    box-shadow: 0 0 0 .2rem #fff,
+    0 0 0 .35rem #069 !important;
+}
+
+/**
+* Remove focus styles for non-keyboard :focus.
+*/
+*:focus:not(.focus-visible) {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+.splitter {
     background-color: transparent;
     height: 250px;
     margin-bottom: 5rem;
 }
+
+a:focus.dropdown-item, a:active.dropdown-item{
+    background-color: #d9c115!important;
+}
+
+
+.active {
+    /* background-color: #111 !important; */ /* Ho messo !important perchè dato che uso questo .active sopra ad altri css è meglio metterlo sempre */
+    color: #d9c115 !important; /* Ho messo !important perche ".topnav a" contiene "color: #f2f2f2;" */
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
-/**
- * Custom cross-browser styles for keyboard :focus overrides defaults.
- */
- *:focus { 
-    outline: 0 !important;
-    box-shadow:
-      0 0 0 .2rem #fff,
-      0 0 0 .35rem #069 !important;
-  }
-  
-  /**
-   * Remove focus styles for non-keyboard :focus.
-   */
-  *:focus:not(.focus-visible) {
-    outline: 0 !important;
-    box-shadow: none !important;
-  }
+#slideshow-container {
+    max-width: inherit;
+    position: relative;
+    margin: auto;
+    background-color: #111;
+    text-align: center;
+    width: 85%;
+}
 
-  .img-hover:hover{
-      opacity: 0.8;
-  }
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.marketing h2 {
+    font-weight: 400;
+}
+.marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+    margin: 4rem 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 300;
+    line-height: 1;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 40em) {
+    .featurette-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+
+    .featurette-heading {
+        margin-top: 7rem;
+    }
+}
+
+/**
+* Add hover styles for img :hover
+*/
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    #slideshow-container {
+        width: 100%;
+    }
+    .splitter {
+        height: 0;
+    }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .splitter {
+        height: 0;
+    }
+}
+
+/* *Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {
+}
+
+/* XX-Large devices (larger desktops) */
+/* No media query since the xxl breakpoint has no upper bound on its width */
